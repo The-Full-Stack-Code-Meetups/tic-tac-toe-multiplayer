@@ -8,6 +8,9 @@ function App() {
   const connect = () => {
     const socket = io('http://localhost:9000');
     
+    socket.on('connect', () => {
+      socket.emit('custom_event', {name: "Alex", age: 15})
+    })
   }
   useEffect(() => {
     connect();
