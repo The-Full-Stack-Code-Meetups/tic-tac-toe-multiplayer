@@ -15,6 +15,7 @@ export class RoomController {
             });
         } else {
             await socket.join(message.roomId);
+            socket.emit('room_joined');
         }
     }
 }

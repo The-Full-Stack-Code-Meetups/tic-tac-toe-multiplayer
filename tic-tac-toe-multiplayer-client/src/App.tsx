@@ -1,20 +1,18 @@
 import React, { useEffect } from 'react';
+/*
+import styled from 'styled-components';
+*/
 import logo from './logo.svg';
 import './App.css';
 import {io} from 'socket.io-client'
-
-
+/*
+const AppContainer = styled.div`
+  width:100%;
+  height:
+`;
+*/
 function App() {
-  const connect = () => {
-    const socket = io('http://localhost:9000');
-    
-    socket.on('connect', () => {
-      socket.emit('custom_event', {name: "Alex", age: 15})
-    })
-  }
-  useEffect(() => {
-    connect();
-  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
